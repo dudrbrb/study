@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cd7ff0a6-3b04-4b72-ba07-ecc94e388ca4" name="sxServer" url="http://52.78.156.195">
+        <fileTransfer accessType="SFTP" host="52.78.156.195" port="22" sshConfigId="c259d85f-e74c-432e-be9a-1b34fd37b6a9" sshConfig="ec2-user@52.78.156.195:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

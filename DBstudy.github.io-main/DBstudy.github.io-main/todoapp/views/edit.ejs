@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <nav>
+                <a href="/">TodoApp</a>
+                <ul>
+                    <li><a href="/write">write</a></li>
+                    <li><a href="/list">list</a></li>
+                    <li><a href="/mypage">mypage</a></li>
+                    <li><a href="/login">login</a></li>
+                </ul>
+            </nav>
+            <section id="edit">
+                <h2>수정하기</h2>
+                
+                <form action="/edit?_method=PUT" method="POST">
+                    <input type="text" name="id" value="<%= post._id %>" style="display:none">
+                    <div>
+                        <label for="title">할일 제목</label>
+                        <input type="text" id="title" name="title" value="<%= post.title %>">
+                    </div>
+                    <div>
+                        <label for="date">할일 날짜</label>
+                        <input type="text" id="date" name="date" value="<%= post.date %>">
+                    </div>
+                    <div>
+                        <button type="submit" class="red">수정하기</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

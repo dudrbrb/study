@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 244, 215);
+}
+#container{
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    background-color: #fefefe;
+    overflow-y: scroll;
+    border-radius: 10px;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(153, 153, 153);
+    padding: 10px;
+    margin: 0 10px;
+    width: 90%;
+    max-width: 950px;
+    position: fixed;
+    background-color: #fefefe;
+}
+nav > a{
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li + li{
+    margin-left: 10px;
+}
+section{
+    padding: 80px 20px 20px;
+}
+h2{
+    margin-bottom: 20px;
+}
+button{
+    border: none;
+    outline: none;
+    color: #fefefe;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}   
+button.red{
+    background-color: rgb(255, 80, 80);
+    border:1px solid rgb(255, 80, 80);
+}
+button.blue{
+    background-color: rgb(80, 133, 255);
+    border:1px solid rgb(80, 133, 255);
+}
+button.blue-line{
+    background: none;
+    border:1px solid rgb(80, 133, 255);
+    color: rgb(80, 133, 255);
+}
+
+
+#write div{
+    margin-bottom: 20px;
+}
+#write label{
+    font-weight: 600;
+}
+#write input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    display: block;
+    margin-top: 10px;
+}
+
+
+#list ul li{
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#list ul li button{
+    margin-top: 10px;
+}
+#list .input-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#list .input-wrapper input{
+    width: 300px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(115, 115, 115);
+    padding: 0 10px;
+}
+#list .button-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+#list .button-wrapper button{
+    margin: 0 3px;
+}
+#list .button-wrapper #chat{
+    margin-left: auto;
+}
+
+#detail h3, #edit h3{
+    margin-bottom: 20px;
+}
+
+#detail button, #edit button{
+    margin-top: 30px;
+}

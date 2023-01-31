@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutorial</title>
+</head>
+<body>
+    <div id="app1">
+      <h4>app1</h4>
+      {{ message }}
+    </div>
+    <br>
+    <div id="app2">
+      <h4>app2</h4>
+      <span v-bind:title="message">
+        이 텍스트에 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니당
+      </span>
+    </div>
+    <br>
+    <div id="app3">
+      <h4>app3</h4>
+      console창에 app3.seen = true 를 입력하면 텍스트가 나타나용
+      <p v-if="seen">까꿍 조건문이에요</p>
+    </div>
+    <br>
+    <div id="app4">
+      <h4>app4</h4>     
+      <p>console창에 app4.todos.push({ text : 'New Item'})을 입력하거나 <br>
+      아래 인풋에 입력하면 Todo에 추가됩니다</p>
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+      <input type="text" id="app4Input">
+      <button v-on:click="addTodos">추가</button>
+    </div>
+
+    <div id="app5">
+      <h4>app5</h4>     
+      <p>{{ message }}</p>
+      <button v-on:click="splitMessage">1. 텍스트 나누기</button>
+      <button v-on:click="reverseMessage">2. 메시지 뒤집기</button>
+      <button v-on:click="joinMessage">3. 메세지 다시 붙이기</button>
+      <button v-on:click="onceChange">한번에 바꿔버리기</button>
+    </div>
+
+    <div id="app6">
+      <h4>app6</h4>     
+      <p>{{ message }}</p>
+      <input v-model="message">
+    </div>
+
+    <div id="app7">
+      <h4>app7</h4>     
+      <ol>
+          <!--
+            이제 각 todo-item 에 todo 객체를 제공합니다.
+            화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다.
+            또한 각 구성 요소에 "키"를 제공해야합니다 (나중에 설명 됨).
+           -->
+          <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+          ></todo-item>
+      </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

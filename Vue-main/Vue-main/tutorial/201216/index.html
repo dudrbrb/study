@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class binding</title>
+
+    <style>
+      div{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(206, 206, 206);
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 30px;
+      }
+      .active {
+        background-color: rgb(85, 173, 255);
+      }
+      .text-danger {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+  <div id="example1" class="static" v-bind:class="{ active: isActive, 'text-danger': hasError}">
+    active: isActive ==> <br>isActive의 참/거짓에 따라 <br>클래스 추가됨
+  </div> 
+
+  <div id="example2" v-bind:class="classObject">
+    한 오브젝트로 바인딩<br>할 수 있음 
+  </div>
+  
+  <div id="example3" v-bind:class="classObject">
+    함수로도 바인딩 가능
+  </div>
+
+  <div id="example4" v-bind:class="[activeClass, errorClass]">
+    배열 구문 사용 
+  </div>
+
+  <div id="example5" v-bind:class="[{ active: isActive }, errorClass]">
+    배열 내 객체
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

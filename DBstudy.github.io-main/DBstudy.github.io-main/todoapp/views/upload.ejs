@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <nav>
+                <a href="/">TodoApp</a>
+                <ul>
+                    <li><a href="/write">write</a></li>
+                    <li><a href="/list">list</a></li>
+                    <li><a href="/mypage">mypage</a></li>
+                    <li><a href="/login">login</a></li>
+                </ul>
+            </nav>
+            <section id="write">
+                <h2>이미지 업로드하기</h2>
+                <form  action="/upload" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <label for="title">업로드 할 이미지를 선택해주세요</label>
+                        <input type="file" name="profile">
+                    </div>
+                    <div>
+                        <button type="submit" class="red">등록</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
