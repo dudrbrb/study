@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGY's Portfolio</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    {% if data_list %}
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <p>Category</p>
+                    <div class="bar"></div>
+                    <li>Main</li>
+                    <li>Introduce</li>
+                    <li>Works</li>
+                </ul>
+            </nav>
+        </aside>
+        <section id="Main">
+            <div class="bg">
+                <img src="{% static 'main/img/title.png' %}" class="title">
+                <img src="{% static 'main/img/arrow.png' %}" class="arrow">
+            </div>
+            <p class="b">Designed and Developed by HGY</p>
+        </section>
+        <section id="Introduce">
+            <div class="title">
+                <img src="{% static 'main/img/Introduce.png' %}" >
+            </div>
+            <div class="profile">
+                <img src="{% static 'main/img/profile.png' %}">
+            </div>
+            <div class="infomation">
+                <ul>
+                    <li>
+                        <span>Name</span>
+                        <p>홍가영</p>
+                    </li>
+                    <li>
+                        <span>Birth</span>
+                        <p>1998.09.10</p>
+                    </li>
+                    <li>
+                        <span>Degree</span>
+                        <p>한국폴리텍대학 시각디자인과 차석 졸업 </p>
+                    </li>
+                    <li>
+                        <span>Career</span>
+                        <p> 웹 에이전시 경력 2년 10개월 (2019.11 ~ 2022.09)<br>
+                            웹 제작 프리랜서 (2022.10 부터 진행 중)</p>
+                    </li>
+                    <li>
+                        <span>Works</span>
+                        <p>
+                            롯데백화점 프로모션 페이지 (MBTI 테스트 / 네이버 실시간 인기 검색어 1위)<br>
+                            롯데면세점(LDF), SK 렌터카, SK 매직, ELAND 등 대기업 모바일 매거진 작업 多<br>
+                            현대모비스 / 기아모비스 차량 소개 매거진<br>
+                            Ferrari 월간 News Letter<br>
+                            법무법인 예율 성범죄 / 이혼 전문 홈페이지<br>
+                            Speakcls 화상영어과외 에듀테크 홈페이지<br>
+                            서울과학기술대학교 졸업전시 홈페이지 등<br>
+                        </p>
+                    </li>
+                    <li>
+                        <span>My Stack</span>
+                        <ul class="stack">
+                            {% for stack in data_list.Stacks %}
+                                <li>{{ stack }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <img src="{% static 'main/img/rotate-bg.png' %}" class="rotate-bg">
+        </section>
+
+        <section id="Works">
+            <div class="title">
+                <img src="{% static 'main/img/works.png' %}">
+            </div>
+            <div class="work_list">
+            {% for work in data_list.Works %}
+                <div class="work_box">
+                    {{ work }}
+                </div>
+            {% endfor %}
+            </div>
+        </section>
+    </main>
+    {% endif %}
+
+    <script src="{% static 'main/js/scroll.js' %}"></script>
+</body>
+</html>
